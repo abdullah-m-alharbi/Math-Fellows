@@ -1,0 +1,887 @@
+/*** Abdullah M ***/
+
+/* Begin applies to all pages */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFFFCC; 
+    background-image: url("una-logo-background.png");
+    background-position: center;
+    background-repeat: no-repeat; 
+    min-height: 100vh;
+}
+
+
+body .background-image {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.container {
+    width: 100%;
+    height: 81.5%;
+}
+/* End applies to all pages */
+
+/* Header stuff */  
+.signed_out_header, .customer_header, .admin_header, .tutor_header{
+    background-image: linear-gradient(#4d0099, #7402BE);
+    height: 102px;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.nav_bar {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.admin_header li, .signed_out_header li, .customer_header li, .tutor_header li {
+    display: inline;
+    text-align: center;
+    font-size: 25px;
+    font-family: bookman, georgia, courier, sans-serif;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav_menu a {
+    padding-right: 60px;
+}
+
+.nav_menu_in_tutor a{
+    padding-left: 25px;
+}
+
+.logo img{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.website_name {
+    display: inline-block;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-size: 45px;
+    font-weight: 800;
+    font-family: bookman, georgia, courier, sans-serif;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    letter-spacing: 15px;
+    transform: scale(1.2,1);
+}
+
+.sign_in_form {
+    display: block;
+    text-align: right;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#sif_input {
+    margin-top: 2px;
+    display: inline-block;
+    border: 1px solid black;		
+    height: 35px;
+    width: 300px;
+    font-size: 20px;
+    font-family: bookman, georgia, courier, sans-serif;
+}
+
+.sign_in_button {
+    display: inline;
+    border-radius: 5px;
+    height: 35px;
+    width: 80px;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font-size: 22px;
+    border: 2px solid black;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 5px 20px 5px 20px;
+}
+
+.button {
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.home_button {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.see_tutor_bttn, .manage_tutors_bttn {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.account_and_sign_out_bttns {
+    display: inline-block;
+    float: right;
+    width: 200px;
+    margin-top: 40px;
+}
+
+#account_bttn {
+    display: inline-block;
+    float: right;
+}
+
+#sign_out_bttn{
+    display: inline-block;
+    float: right;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+/* End Header stuff */
+
+.main_text {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: dimgrey;
+    font-family: bookman, georgia, courier, sans-serif;
+}
+
+.see_tutor_msg, .tutors_found_msg, .instructions_msg, .acct_msg{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: dimgrey;
+    font-family: bookman, georgia, courier, sans-serif;
+}
+
+.tutor_selection {
+    display: block;
+    position: relative;
+    width: 600px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-image: linear-gradient(#4d0099, #7402BE);
+    border-radius: 30px;
+}
+
+.tutor_selection label{
+    font-size: 27px;
+    margin-top: 10px;
+}
+
+.grades, .subjects {
+    height: 95%;
+    margin: 10px;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: bookman, georgia, courier, sans-serif;
+    text-align: center;
+}
+
+.grades_box{
+    float: left;
+    margin-left: 10px;
+    margin-top: 30px;
+    width: 202px;
+    height: 80%;
+}
+
+.subjects_box{
+    float: right;
+    margin-right: 10px;
+    margin-top: 30px;
+    width: 202px;
+    height: 80%;
+}
+
+.grades #grade_input, .subjects #subject_input{
+    display: block;
+    margin-top: 35px;
+}
+
+input[type=checkbox], input[type=radio]{
+    transform: scale(1.2);
+    margin-right: 5px;
+}
+
+.search_bttn_box{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    bottom: 10;
+    transform: translateX(-50%);
+    left: 50%;
+    right: 50%;
+}
+
+.urls{
+    display: block;
+    margin-top: 150px;
+}
+
+#urls {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.url1 {
+    width: 26%;
+}
+
+.url2 {
+    width: 19%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.so a {
+    color: #993ddb;
+    text-shadow: none;
+}
+
+.ad {
+    margin-top: 0px;
+}
+
+body a:hover{
+    color: darkorange;
+}
+
+.sign_up, .change_name, .change_email, .change_password {
+    display: block;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: dimgrey;
+    font-family: bookman, georgia, courier, sans-serif;
+}
+
+.sign_up form, .change_name form, .change_password form {
+    margin-left: 30%;
+    width:40%;
+}
+
+.change_email form{
+    margin-left: 25%;
+    width: 47%;
+}
+
+.sign_up div, .change_name div, .change_email div, .change_password div{
+    margin-top: 20px;
+}
+
+.sign_up input, .change_name input, .change_email input, .change_password input{
+    float: right;
+    border: 1px solid grey;		
+    height: 22px;
+    width: 320px; 
+}
+
+#dont_float input{
+    display: inline;
+    float: none;
+    width: 20px;
+    margin-left: 20%;
+}
+
+.sign_up #submit_button, .change_name #submit_button, .change_email #submit_button, .change_password #submit_button {
+    margin-top: 40px;
+    margin-left: 45%;
+}
+
+.tutor_box {
+    display: block;
+    position: relative;
+    width: 580px;
+    height: 200px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(#4d0099, #7402BE);
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.in_tut_acct .tutor_box{
+    margin-left: 36%;
+}
+
+.tutor_image {
+    display: inline-block;
+    float: left;
+    height: 150px;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.tutor_image img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.tutor_name_box, .tutor_name_box_in_manage {
+    display: inline-block;
+    position: absolute;
+    width: 480px;
+    left: 170;
+    top: 10;
+}
+
+.tutor_name_text, .active_inactive, .full_name_text, .username_text, .sign_up_date_text {
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: bookman, georgia, courier, sans-serif;
+}
+
+.full_name_text, .username_text, .sign_up_date_text{
+    display: block;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.full_name_text{
+    padding-top: 10px;
+}
+
+.approve_bttn{
+    display: inline-block;
+    position: absolute;
+    left: 10;
+    bottom: 10;
+}
+.disapprove_bttn{
+    display: inline-block;
+    position: absolute;
+    right: 10;
+    bottom: 10;
+}
+
+.active_inactive{
+    display: inline-block;
+    position: absolute;
+    top:10;
+    right:20;
+}
+
+.desc_box{
+    display: inline-block;
+    position: absolute;
+    width: 68%;
+    height: 60%;
+    background-color: white;
+    border-radius: 5px;
+    top: 35;
+    left:170;
+}
+
+.desc_text {
+    display: inline-block;
+    overflow-wrap: break-word;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 0px;
+    font-family: bookman, georgia, courier, sans-serif;
+    font-size: 15px;
+}
+
+.submit_bttn_box{
+    position: absolute;
+    width: 85px;
+    height: 30px;
+    bottom: 5;
+    transform: translateX(-50%);
+    left: 50%;
+    right: 50%;
+}
+
+.submit_bttn_box input{
+    width: 140px;
+}
+
+.instructions_msg #msg {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.confirm_tutor {
+    position: absolute;
+    width: 85px;
+    height: 30px;
+    bottom: 5;
+    transform: translateX(-50%);
+    left: 50%;
+    right: 50%;
+}
+
+.selection_box, .new_tutor_box, .admin_menu_box{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 80%;
+    margin-top: 30px;
+    background-image: linear-gradient(#4d0099, #7402BE);
+    border-radius: 30px;
+}
+
+.tutor_acct_left_panel {
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    width: 330px;
+    height: 500px;
+    margin-top: 30px;
+    background-image: linear-gradient(#4d0099, #7402BE);
+    border-radius: 30px;
+}
+
+.new_tutor_box, .admin_menu_box{
+    position: relative;
+    width: 450px;
+    height: 160px;
+}
+
+#acct_url1, #acct_url2, #tut_acct_url { /*, #view_tutors_url, #manage_tutors_url{ */
+    display: block;
+    position: absolute;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-left: 28%;
+}
+
+#tut_acct_url{
+    position: relative;
+    margin-left: 35px;
+    padding-top: 20px;
+}
+
+#acct_url1 { 
+    margin-top: 150px;
+}
+
+#acct_url2 { 
+    margin-top: 300px;
+}
+
+#view_tutors_url, #manage_tutors_url { 
+    display: block;
+    padding-top: 30px;
+    margin-left: 20%;
+    font-size: 30px;
+}
+
+.upload_image_div{ 
+    margin-top: 50px;
+    text-align: center;
+}
+
+.upload_image_div input{
+    height: 60px;
+    width: 300px;
+    padding-top: 20px;
+    font-size: 30px;
+    color: dimgrey;
+    font-family: bookman, georgia, courier, sans-serif;
+}
+
+/**************************************************
+  Controlling different viewports below 
+**************************************************/
+
+@media only screen and (max-width: 600px) {
+
+    /* Begin header stuff */
+    .signed_out_header {
+        height: 90px;
+    }
+
+    .customer_header, .admin_header, .tutor_header, .signed_out_header{
+        height: 145px;
+    }
+
+    .nav_bar {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .admin_header li, .signed_out_header li, .customer_header li, .tutor_header li {
+        display: inline;
+        text-align: center;
+        font-size: 35px;
+        font-family: bookman, georgia, courier, sans-serif;
+        list-style-type: none;
+        overflow: hidden;
+    }
+
+    .nav_menu a {
+        padding-right: 40px;
+    }
+
+    .nav_menu_in_tutor a{
+        padding-left: 5px;
+    }
+
+    .logo img{
+        width: 135px;
+        height: 135px;
+    }
+
+    .website_name {
+        padding-top: 20px;
+        margin-bottom: 14px;
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .sign_in_form {
+        display: block;
+        text-align: right;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    #sif_input {
+        margin-top: 2px;
+        display: inline-block;
+        border: 1px solid black;		
+        height: 35px;
+        width: 235px;
+    }
+
+    .sign_in_button {
+        display: inline;
+        border-radius: 5px;
+        height: 35px;
+        width: 80px;
+    }
+
+    /* End header stuff */	
+
+    .instructions_msg {
+        margin-top: 20px;
+        font-size: 45px;
+    }
+
+    .main_text {
+        margin-top: 20px;
+        font-size: 45px;
+    }
+
+    /* Begin customer UI  */
+    .see_tutor_msg {
+        width: 580px;
+        margin-top: 10px;
+        font-size: 45px;
+    }
+    .tutors_found_msg {
+        font-size: 40px;
+        margin-top: 15px;
+    }
+    /* End custmer UI */
+
+    /* Begin tutor UI  */
+    .acct_msg{
+        font-size: 45px;
+        margin-top: 10px;
+    }
+
+    .tutor_acct_left_panel {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        height: 370px;
+        width:255px;
+    }
+
+    #tut_acct_url { 
+        margin-top: 15px;
+        padding-top: 15px;
+        font-size: 25px;
+        margin-left: 15px;
+    }
+
+    .in_tut_acct .tutor_box{
+        margin-left: 0;
+        transform: translateX(-50%);
+        left: 50%;
+        right: 50%;
+    }
+
+    .sign_up, .change_name, .change_email, .change_password {
+        margin-top: 40px;
+        font-size: 30px;
+        margin-left: 0px;
+        width: 990px;
+    }
+
+    .sign_up form, .change_name form, .change_password form, .change_email form {
+        margin-left: 150px;
+        width: 590px;
+    }
+
+    .change_name form #submit_button {
+        margin-top: 0px;
+    }
+
+    .upload_image_div input{
+        height: 70px;
+        width: 700px;
+        margin-bottom: 10px;
+    }
+    /* End tutor UI  */
+} 
+
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+    /* Begin header stuff */
+    .signed_out_header {
+        height: 90px;
+    }
+
+    .customer_header, .admin_header, .tutor_header, .signed_out_header{
+        height: 145px;
+    }
+
+    .nav_bar {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .admin_header li, .signed_out_header li, .customer_header li, .tutor_header li {
+        display: inline;
+        text-align: center;
+        font-size: 35px;
+        font-family: bookman, georgia, courier, sans-serif;
+        list-style-type: none;
+        overflow: hidden;
+    }
+
+    .nav_menu a {
+        padding-right: 30px;
+    }
+
+    .nav_menu_in_tutor a{
+        padding-left: 5px;
+    }
+
+    .logo img{
+        width: 145px;
+        height: 145px;
+    }
+
+    .website_name {
+        padding-top: 20px;
+        margin-bottom: 14px;
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .sign_in_form {
+        display: block;
+        text-align: right;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    #sif_input {
+        margin-top: 2px;
+        display: inline-block;
+        border: 1px solid black;		
+        height: 35px;
+        width: 235px;
+    }
+
+    .sign_in_button {
+        display: inline;
+        border-radius: 5px;
+        height: 35px;
+        width: 80px;
+    }
+
+    .main_text {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .instructions_msg {
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .sign_in {
+        color: dimgrey;
+        font-weight: bold;
+        width: 220px;
+        margin-top: 120px;
+        text-shadow: none;
+        font-size: 20px;
+    }
+    /* End header stuff */
+
+    /* Begin signed out UI */
+    .urls{
+        margin-top: 110px;
+    }
+
+    #urls {
+        margin-top: 60px;
+    }
+    /* End signed out UI */
+
+    /* Begin tutor UI  */
+    .tutor_acct_left_panel {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        height: 370px;
+        width:255px;
+    }
+
+    #tut_acct_url { 
+        margin-top: 15px;
+        padding-top: 15px;
+        font-size: 25px;
+        margin-left: 15px;
+    }
+
+    .in_tut_acct .tutor_box{
+        margin-left: 0;
+        transform: translateX(-50%);
+        left: 50%;
+        right: 50%;
+    }
+
+    .sign_up, .change_name, .change_email, .change_password {
+        margin-top: 40px;
+        font-size: 30px;
+        margin-left: 0px;
+        width: 990px;
+    }
+
+    .sign_up form, .change_name form, .change_password form, .change_email form {
+        margin-left: 150px;
+        width: 590px;
+    }
+
+    .change_name form #submit_button {
+        margin-top: 0px;
+    }
+
+    .upload_image_div input{
+        height: 70px;
+        width: 700px;
+        margin-bottom: 10px;
+    }
+    /* End tutor UI  */
+} 
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+    /* Begin signed out UI */
+    .urls{
+        margin-top: 110px;
+    }
+
+    #urls {
+        margin-top: 60px;
+    }
+    /* End signed out UI */
+
+    /* Begin tutor UI  */
+    .tutor_acct_left_panel {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        height: 340px;
+        width:255px;
+    }
+
+    #tut_acct_url { 
+        margin-top: 15px;
+        padding-top: 15px;
+        font-size: 25px;
+        margin-left: 20px;
+    }
+
+    .in_tut_acct .tutor_box{
+        margin-left: 0;
+        transform: translateX(-50%);
+        left: 50%;
+        right: 50%;
+    }
+
+    #tut_acct_url { 
+        margin-top: 10px;
+        font-size: 25px;
+        margin-left: 10px;
+    }
+
+    .sign_up, .change_name, .change_email, .change_password {
+        margin-top: 40px;
+        font-size: 30px;
+        margin-left: 0px;
+        width: 990px;
+    }
+
+    .sign_up form, .change_name form, .change_password form, .change_email form {
+        margin-left: 150px;
+        width: 590px;
+    }
+
+    .change_name form #submit_button {
+        margin-top: 0px;
+    }
+
+    .upload_image_div input{
+        height: 70px;
+        width: 700px;
+        margin-bottom: 10px;
+    }
+    /* End tutor UI  */
+}
